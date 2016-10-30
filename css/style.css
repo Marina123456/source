@@ -1,0 +1,558 @@
+
+@media screen and (max-width: 2000px) {
+    html{ font-size: 16pt;}
+}
+@media screen and (max-width: 1280px) {
+    html{ font-size: 12pt;}
+}
+@media screen and (max-width: 400px) {
+    html{ font-size: 8pt;}
+}
+@media screen and (max-width: 320px) {
+    html{ font-size: 6pt;}
+}
+body{
+    font-family: 'Comfortaa', cursive;
+}
+.containerImgMany{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index:1;
+    background-color: black;
+
+}
+.containerImgMany div{
+    height: 100vh;
+    width: 10%;
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+.containerImgMany div img {
+    min-width: inherit;
+    min-height: inherit;
+    width: 96%;
+}
+
+.containerSlide{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:2;
+}
+.slides{
+    width: 100%;
+    height: 100vh;
+}
+.slides:nth-child(2n){
+    background-color: crimson;
+}
+.slides:nth-child(2n+1){
+    background-color: antiquewhite;
+}
+#slide_Welcome{
+    font-size: 3rem;
+    background: #eae6db;
+    background-image: repeating-linear-gradient(45deg, hsla(0,0%,100%,.5), hsla(0,0%,100%,.5) 15px, transparent 0, transparent 30px);
+
+    color: #dd1870;
+    width: 100%;
+    font-weight: 900;
+}
+#slide_Welcome h4{
+    text-align: center;
+    margin: auto;
+    margin-top: 15%;
+    width: 80%;
+    background-color: #9d8a84;
+    color: #444766;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 2px dashed #eae6db;
+    outline-offset: -10px;
+}
+.welcome_div{
+    margin: auto;
+    margin-top: 2%;
+    width: 85%;
+    background-color: hsla(0,0%,100%,.5);
+}
+.welcome_div p{
+    font-size: .5em;
+}
+#arrow{
+    margin: auto;
+    width: 1em;
+    height: 1em;
+    background-size: cover;
+    -webkit-animation: displayAn  2s infinite ease-in-out;
+    animation: displayAn  2s infinite ease-in-out;
+}
+@-webkit-keyframes displayAn {
+    from {margin-top: 0;}
+    50% {margin-top: 20px;}
+    to {margin-top: 0;}
+}
+@keyframes displayAn {
+    from {margin-top: 0;}
+    50% {margin-top: 20px;}
+    to {margin-top: 0;}
+}
+.containerInfo{
+    display:flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-wrap: wrap;
+    /*background-color: blue;*/
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+}
+.line {
+    width: 50px;
+    height: 1300vh;
+    /*background-color: cadetblue;*/
+}
+.line_svg {
+    stroke: #444766;
+    /*shape-rendering: crispEdges;*/
+    stroke-width: .3em;
+    stroke-dasharray: 10;
+}
+.containerAva{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+    height: 1300vh;
+}
+.ava{
+    margin: auto;
+    width: 2.2em;
+    height: 2.2em;
+    text-align: center;
+    line-height: 2.2em;
+    font-size: 2.2em;
+    font-weight: 800;
+    color:white;
+    border-radius: 50%;
+    background-color: #dd1870;
+}
+.containerElem{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+.containerElem_Animation{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100vh;
+    width: 98%;
+    z-index: 4;
+
+}
+.containerElem_Animation_div{
+    /*background-color: #dd1870;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#svgCat1{
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    margin-top: 5vh;
+}
+#svgMouse{
+
+    width: 5em;
+    height: 5em;
+    margin-left: 0;
+    background-size: cover;
+}
+#svgRain{
+    width: 100%;
+    height: 100%;
+    background-size: 10em 10em;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+    opacity: .2;
+}
+#sad{
+    width: 30em;
+    height: 30em;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+#tabletka{
+    width: 100%;
+    height: 100%;
+    background-size: 20em 20em;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+    opacity: .2;
+}
+#sick{
+    width: 25em;
+    height: 25em;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+#svgCloud1{
+    margin-top: 80vh;
+}
+#svgCloud1{
+    margin-left: 120px;
+
+}
+#svgCloud2{
+    margin-left: 100px;
+}
+#svgCloud2, #svgCloud1{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: relative;
+}
+.strah{
+    position: relative;
+    overflow: hidden;
+}
+#luna{
+    width: 20em;
+    height: 20em;
+    background-color: #c5f1f0;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 2vh;
+}
+#vd{
+    width: 16em;
+    height: 16em;
+    background-size: cover;
+    position: absolute;
+    margin-top: 25vh;
+}
+#mouse_night{
+    width: 100%;
+    height: 100%;
+    background-size: 5em 5em;
+    background-repeat: repeat;
+    opacity: .3;
+    position: absolute;
+
+
+}
+#cat_zlo{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    margin-top: 25%;
+}
+#butterfly{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    position: absolute;
+    z-index:1;
+    background-size: 6em 6em;
+    opacity: .3;
+}
+#vd2{
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    margin-left: 7em;
+    margin-top: 1em;
+    position: relative;
+    z-index: 2;
+}
+#bel{
+    width: 17em;
+    height: 17em;
+    background-size: cover;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+#mdhouse{
+    width: 120%;
+    height: 100%;
+    margin-left: -50%;
+    background-size: cover;
+    position: absolute;
+    z-index:1;
+    opacity: 0.5;
+}
+#grafity{
+    width: 16em;
+    height: 16em;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+}
+
+#angry {
+    width: 19em;
+    height: 19em;
+    margin-top: 25%;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+#angryClouds {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    position: absolute;
+    z-index:1;
+    background-size: 15em 15em;
+    opacity: .5;
+}
+#pain, #sud,#lazy, #mount, #study{
+    width: 25em;
+    height: 25em;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+#happy{
+    width: 50em;
+    height: 50em;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+#sud {
+    width: 32em;
+    height: 32em;
+}
+.elem{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #e9e7db;
+}
+.elemR{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #444766;
+    overflow: hidden;
+
+}
+.elemR_description{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: dashed 2px;
+    padding: 3px;
+}
+.elemL{
+    width: 51%;
+    height: 100%;
+    overflow: hidden;
+}
+.elemL_img {
+    min-width: inherit;
+    min-height: inherit;
+    height: inherit;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    display:none;
+}
+
+.elem:nth-child(n+12) .elemR, .elem:nth-child(n+12) .elemL{
+    background-color: darkorange;
+}
+.elem:nth-child(4){
+    background-color: #1d2b45;
+
+}
+.elem:nth-child(2){
+    background-color: #bbc2d4;
+}
+.elem:nth-child(4) .elemR{
+    color: #c5f1f0;
+}
+.elem:nth-child(5), .elem:nth-child(8){
+    background-color: #fef2c2;
+
+}
+.elem:nth-child(7){
+    background-color: #64a0c2;
+
+}
+.elem:nth-child(3){
+    background-color: #006650;
+}
+.elem:nth-child(10){
+
+    background-color: #74accd!important;
+
+}
+.elem:nth-child(11){
+
+    background-color: #FFC46B!important;
+
+}
+
+.elem:nth-child(7) .elemR{
+    color: #C02222;
+
+}
+.elem:nth-child(5) .elemR{
+    color: #715057;
+}
+.elem:nth-child(3) .elemR{
+    color: #ffc21c;
+}
+.line_svg:nth-child(4){
+    /*stroke: #c5f1f0;*/
+}
+
+
+.containerSVG{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+}
+.containerSVG div{
+    width: 5em;
+    height: 5em;
+    background-size: cover;
+}
+#contact{
+    width: 100%;
+    height: 50vh;
+    top: 1400vh;
+    background-color: white;
+    position: absolute;
+    left:0;
+}
+#postmark {
+    width: 6em;
+    height: 6em;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#leter{
+    width: 92%;
+    height: 100%;
+    margin: auto;
+    padding: 1em;
+    color: #58a;
+    background-color: white;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white)
+    padding-box,
+    repeating-linear-gradient(-45deg,
+            red 0, red 12.5%,
+            transparent 0, transparent 25%,
+            #58a 0, #58a 37.5%,
+            transparent 0, transparent 50%)
+    0 / 5em 5em;
+    overflow: hidden;
+    position: relative;
+}
+#leter .left, #leter .right {
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-top: 3em;
+}
+#leter .right{ margin-left: 4em;}
+#leter input{
+    border: none;
+    border-bottom: #58a solid 2px;
+
+    margin-left: 20px;
+    height: 20px;
+    width: 90%;
+}
+#leter #textEmLab{
+    height: 100%;
+
+}
+#leter textarea{
+    width: 90%;
+    height: 8em;
+    border: #58a solid 2px;
+}
+#leter input[type="submit"]{
+    margin-left: 0;
+    width: 90%;
+    height:  2em;
+    margin-top: 2em;
+    color: red;
+    border: solid 2px;
+    background-color: white;
+}
+#footer{
+    width: 100%;
+    height: 30vh;
+    top: 1460vh;
+    background-color: red;
+    position: absolute;
+    left:0;
+}

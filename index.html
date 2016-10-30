@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--
+    <script src="http://vuejs.org/js/vue.js"></script>-->
+
+    <script src="js/vue.js"></script>
+
+    <!--для визуализации данных-->
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+</head>
+<body onload="loadComponents()">
+    <div class="containerSlide">
+        <div id="slide_Welcome" class="slides">
+            <h4 class="wow zoomIn">Шкала эмоциональных тонов по Рону Хаббарду</h4><br>
+
+
+            <div id="arrow" style="background-image: url(img/svg/Arrow.svg);"></div>
+        </div>
+    </div>
+    <div class="containerInfo">
+        <div class="line"></div>
+    </div>
+
+    <div class="containerAva">
+        <div class="ava"  v-for="slideObj in slideObjs">{{slideObj.k}}</div>
+    </div>
+    <div class="containerSVG" id="containerSVG">
+        <div id="svgSmile" style="background-image: url(img/svg/2.svg);" class="smile"></div>
+    </div>
+    <div class="containerElem">
+        <div class="elem" v-for="slideObj in slideObjs">
+
+            <div class="elemR" v-bind:id="slideObj.id" v-bind:sdata="slideObj.sdata" cdata="0">
+                <h2 class="elemR_title">{{slideObj.name}}</h2>
+                <div class="elemR_description">
+                    {{slideObj.description}}
+                </div>
+            </div>
+            <div class="elemL">
+                <img class="elemL_img" v-bind:src="slideObj.pictBig"  >
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div id="leter">
+
+            <form>
+                <div class="left">
+                    <div id="postmark" style="background-image: url(img/svg/postmark.svg);"></div>
+                    <label for="name">Ваше имя:<br><input id="name"></label><br>
+                    <label for="email">Ваш e-mail:<br><input id="email"></label><br>
+                </div>
+                <div class="right">
+                    <label id="textEmLab" for="textEm">Текст сообщения:<br><textarea id="textEm"></textarea></label><br>
+                    <input type="submit" value="Отправить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--<div id="footer"></div>-->
+    <div class="containerElem_Animation">
+        <div class="containerElem_Animation_div">
+            <div id="svgCat1" style="background-image: url(img/svg/cat_f.svg);" class="smile"></div>
+            <div id="svgMouse" style="background-image: url(img/svg/mouse.svg);" class="smile"></div>
+        </div>
+        <div class="containerElem_Animation_div" style="height: 100vh">
+            <div id="shar"></div>
+            <div id="sad" style="background-image: url(img/svg/sad.svg);" class="smile wow fadeInUp" data-wow-duration="3.5s"></div>
+            <div id="svgRain" style="background-image: url(img/svg/rain.svg);" class="smile"></div>
+            <div id="svgCloud1" style="background-image: url(img/svg/cloud.svg);" class="smile"></div>
+            <div id="svgCloud2" style="background-image: url(img/svg/cloud_w.svg);" class="smile"></div>
+        </div>
+        <div class="containerElem_Animation_div" style="height: 100vh">
+            <div id="tabletka" style="background-image: url(img/svg/tabletka.svg);" class="smile"></div>
+            <div id="sick" style="background-image: url(img/svg/sick.svg);" class="wow fadeInRight" data-wow-duration="3.5s"></div>
+        </div>
+        <div class="containerElem_Animation_div strah">
+            <div id="mouse_night" style="background-image: url(img/svg/mouse_night.svg);"></div>
+            <div id="luna"></div>
+            <div id="vd" style="background-image: url(img/svg/vd.svg);" class="wow fadeInLeft" data-wow-duration="3.5s"></div>
+
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="butterfly" style="background-image: url(img/svg/butterfly.svg);"></div>
+            <div id="vd2" style="background-image: url(img/svg/vd2.svg);" class="wow fadeInRight" data-wow-duration="3.5s"></div>
+            <div id="bel" style="background-image: url(img/svg/bel.svg);" class="wow fadeInUp" data-wow-duration="3.5s"></div>
+
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="mdhouse" style="background-image: url(img/svg/mdhouse.svg);"></div>
+            <div id="grafity" style="background-image: url(img/svg/grafity.svg);" class="wow fadeInRight" data-wow-duration="3.5s"></div>
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="angryClouds" style="background-image: url(img/svg/cloud_w.svg);"></div>
+            <div id="angry" style="background-image: url(img/svg/angry.svg);" class="wow rotateIn" data-wow-duration="3.5s"></div>
+
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="pain" style="background-image: url(img/svg/pain.svg);"></div>
+
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="sud" style="background-image: url(img/svg/sud.svg);"></div>
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="lazy" style="background-image: url(img/svg/lazy.svg);"></div>
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="mount" style="background-image: url(img/svg/mount.svg);"></div>
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="study" style="background-image: url(img/svg/study.svg);"></div>
+        </div>
+        <div class="containerElem_Animation_div">
+            <div id="happy" style="background-image: url(img/svg/happy.svg);"></div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
